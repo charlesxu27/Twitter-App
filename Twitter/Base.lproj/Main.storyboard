@@ -9,17 +9,17 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="qVE-qZ-RlJ">
             <objects>
-                <viewController id="8VX-F2-qoo" sceneMemberID="viewController">
+                <viewController id="8VX-F2-qoo" customClass="LoginViewController" customModule="Twitter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sgL-ki-iJV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j1U-ne-D2a">
                                 <rect key="frame" x="127.5" y="425" width="159" height="46"/>
-                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <color key="backgroundColor" red="0.2901961207" green="0.60000002379999995" blue="0.91372549530000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="j1U-ne-D2a" secondAttribute="height" multiplier="159:46" id="Gyn-XI-gbG"/>
                                     <constraint firstAttribute="height" constant="46" id="O2Q-hn-vD9"/>
@@ -30,13 +30,24 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="26"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="onLoginButton:" destination="8VX-F2-qoo" eventType="touchUpInside" id="c2N-ND-1Xd"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Twitter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jtf-Af-ENi">
+                                <rect key="frame" x="96" y="342" width="222" height="31"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="26"/>
+                                <color key="textColor" red="0.2901961207" green="0.60000002379999995" blue="0.91372549530000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cBa-Hx-gYA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Jtf-Af-ENi" firstAttribute="top" secondItem="cBa-Hx-gYA" secondAttribute="top" constant="298" id="46W-ri-zqu"/>
                             <constraint firstItem="j1U-ne-D2a" firstAttribute="centerY" secondItem="sgL-ki-iJV" secondAttribute="centerY" id="FMs-M5-96g"/>
                             <constraint firstItem="j1U-ne-D2a" firstAttribute="centerX" secondItem="sgL-ki-iJV" secondAttribute="centerX" id="TOv-tq-BBt"/>
+                            <constraint firstItem="Jtf-Af-ENi" firstAttribute="centerX" secondItem="j1U-ne-D2a" secondAttribute="centerX" id="b6q-KW-fTI"/>
                         </constraints>
                     </view>
                     <connections>
@@ -47,12 +58,12 @@
             </objects>
             <point key="canvasLocation" x="139.13043478260872" y="137.94642857142856"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Home-->
         <scene sceneID="UzC-jA-avK">
             <objects>
-                <tableViewController id="AQT-wV-1jS" sceneMemberID="viewController">
+                <tableViewController id="AQT-wV-1jS" customClass="HomeTableViewController" customModule="Twitter" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="G5D-dp-gZ3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
@@ -70,7 +81,13 @@
                             <outlet property="delegate" destination="AQT-wV-1jS" id="PNH-IH-FTW"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="JHK-fB-aZY"/>
+                    <navigationItem key="navigationItem" title="Home" id="JHK-fB-aZY">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="CUm-UV-NJZ">
+                            <connections>
+                                <action selector="onLogout:" destination="AQT-wV-1jS" id="KCW-0K-Ivx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ngS-6e-18A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -79,10 +96,24 @@
         <!--Navigation Controller-->
         <scene sceneID="VZu-HO-WCO">
             <objects>
-                <navigationController id="8oE-cV-dl4" sceneMemberID="viewController">
+                <navigationController modalPresentationStyle="fullScreen" id="8oE-cV-dl4" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="5hz-rT-brS">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.2901961207" green="0.60000002379999995" blue="0.91372549530000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.2901961207" green="0.60000002379999995" blue="0.91372549530000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <color key="textShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" red="0.2901961207" green="0.60000002379999995" blue="0.91372549530000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </textAttributes>
+                        <navigationBarAppearance key="standardAppearance">
+                            <color key="backgroundColor" red="0.2901961207" green="0.60000002379999995" blue="0.91372549530000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </navigationBarAppearance>
+                        <navigationBarAppearance key="scrollEdgeAppearance">
+                            <color key="backgroundColor" red="0.2901961207" green="0.60000002379999995" blue="0.91372549530000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </navigationBarAppearance>
                     </navigationBar>
                     <connections>
                         <segue destination="AQT-wV-1jS" kind="relationship" relationship="rootViewController" id="fvx-Be-VEy"/>
@@ -96,9 +127,6 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
