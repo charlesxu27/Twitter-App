@@ -12,6 +12,7 @@
 		5614B36827C7601800B52C17 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5614B36727C7601800B52C17 /* LoginViewController.swift */; };
 		5614B36A27C76F1A00B52C17 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5614B36927C76F1A00B52C17 /* HomeTableViewController.swift */; };
 		5614B36C27C7E16700B52C17 /* tweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5614B36B27C7E16700B52C17 /* tweetCell.swift */; };
+		56A7D13127CD98D8004CDE25 /* TweetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A7D13027CD98D8004CDE25 /* TweetViewController.swift */; };
 		6EBCF52621DF07FC00451C03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBCF52521DF07FC00451C03 /* AppDelegate.swift */; };
 		6EBCF52B21DF07FC00451C03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EBCF52921DF07FC00451C03 /* Main.storyboard */; };
 		6EBCF54421E047A500451C03 /* TwitterAPICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBCF54321E047A500451C03 /* TwitterAPICaller.swift */; };
@@ -24,6 +25,7 @@
 		5614B36727C7601800B52C17 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5614B36927C76F1A00B52C17 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		5614B36B27C7E16700B52C17 /* tweetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tweetCell.swift; sourceTree = "<group>"; };
+		56A7D13027CD98D8004CDE25 /* TweetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetViewController.swift; sourceTree = "<group>"; };
 		6EBCF52221DF07FC00451C03 /* Twitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Twitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EBCF52521DF07FC00451C03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6EBCF52A21DF07FC00451C03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				5614B36727C7601800B52C17 /* LoginViewController.swift */,
 				5614B36927C76F1A00B52C17 /* HomeTableViewController.swift */,
 				5614B36B27C7E16700B52C17 /* tweetCell.swift */,
+				56A7D13027CD98D8004CDE25 /* TweetViewController.swift */,
 			);
 			path = Twitter;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 			files = (
 				5614B36C27C7E16700B52C17 /* tweetCell.swift in Sources */,
 				5614B36A27C76F1A00B52C17 /* HomeTableViewController.swift in Sources */,
+				56A7D13127CD98D8004CDE25 /* TweetViewController.swift in Sources */,
 				5614B36827C7601800B52C17 /* LoginViewController.swift in Sources */,
 				6EBCF54421E047A500451C03 /* TwitterAPICaller.swift in Sources */,
 				6EBCF52621DF07FC00451C03 /* AppDelegate.swift in Sources */,
@@ -355,12 +359,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 99YXD7A367;
 				INFOPLIST_FILE = Twitter/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.codepath.TwitterTestApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codepath.TwitterApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -375,12 +379,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 99YXD7A367;
 				INFOPLIST_FILE = Twitter/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.codepath.TwitterTestApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codepath.TwitterApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
